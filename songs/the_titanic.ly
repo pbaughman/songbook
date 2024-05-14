@@ -16,6 +16,7 @@
   
     d8 e fs( a) fs d e( g) e cs d2
   }
+  \layout {}
   \midi {
     \tempo 4=120
   }
