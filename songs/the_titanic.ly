@@ -6,9 +6,9 @@
     \relative { 
       \key g \major
       \partial 4
-      {a'8 a b a a fs a fs4 fs8 e d d b d4 }
+      {a'8 a b a a fs( a fs4) fs8 e d d( b) d4 }
       \addlyrics {
-        Oh they built the ship titanic _ _ to sail the ocean _ blue
+        Oh they built the ship titanic to sail the ocean blue
       }
 
       {d8 e fs a a b a4 a8 a b  e, e fs e4}
@@ -21,14 +21,23 @@
         but the good lord raised his hand, said the ship would not withstand
       }
 
-      {d8 e fs( a) fs d e( g) e cs d2}
+      {d8 e fs( a) fs d e( g) e cs d4~ d2}
       \addlyrics {
         it was sad when the great ship went down.
       }
   
-      d'8 cs b4 d8 b a4 fs8 g a a a a( d) b fs e
+      {d'8 cs b4~ b2 d8 b a4~ a2}
+      \addlyrics {
+        it was sad it was sad
+      }
+
+      {fs8 g a4 a8 a a( d) b fs e4}
+      \addlyrics {
+        it was sad when the great ship went down
+      }
+
       <<
-        {a b a g fs e d8 d4 d8 fs4 fs8 fs g g g g gs4}
+        {a8 b a g fs e d8 d4 d8 fs4 fs8 fs g g g g gs4}
         \addlyrics {
           to the bottom _ of the husbands _ and wives little _ children _ lost their lives
         }
