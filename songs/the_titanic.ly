@@ -21,15 +21,24 @@
         but the good lord raised his hand, said the ship would not withstand
       }
 
-      {d8 e fs( a) fs d e( g) e cs d4~ d2}
+      {d8 e fs( a) fs d e( g) e cs d4~ d2 r4}
       \addlyrics {
         it was sad when the great ship went down.
       }
-  
-      {d'8 cs b4~ b2 d8 b a4~ a2}
-      \addlyrics {
-        it was sad it was sad
-      }
+ 
+      <<
+        {d'8 cs b4~ b2 d8 b a4~ a2}
+        \addlyrics {
+          it was sad it was sad
+        }
+        \new Staff {
+          \clef treble \key g \major
+          {r2 b4 b4 r2 a4 a4}
+          \addlyrics {
+            so sad so sad
+          }
+        }
+      >>
 
       {fs8 g a4 a8 a a( d) b fs e4}
       \addlyrics {
@@ -50,7 +59,7 @@
         }
       >>
   
-      {d'8 e fs( a) fs d e( g) e cs d2}
+      {d'8 e fs( a) fs d e( g) e cs d4~ d2}
       \addlyrics {
         it was sad when the great ship went down.
       }
