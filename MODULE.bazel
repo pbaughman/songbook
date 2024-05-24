@@ -7,3 +7,24 @@ http_archive(
   build_file_content = "exports_files(['bin/lilypond'])",
   strip_prefix="lilypond-2.24.3",
 )
+
+PANDOC_VERSION = "2.8.0.1"
+
+BUILD_CONTENT_UNIX = """
+filegroup(
+    name = "pandoc",
+    srcs = ["bin/pandoc"],
+    visibility = ["//visibility:public"],
+)"""
+
+http_archive(
+    name = "pandoc_bin_linux-x86_64",
+    build_file_content = BUILD_CONTENT_UNIX,
+    sha256 = "8ebf1b6c852d77290345afdd565547bdbd5de7888362f5a69fc7f51aeb8696a2",
+    strip_prefix = "pandoc-{v}".format(v = PANDOC_VERSION),
+    url = "https://github.com/jgm/pandoc/releases/download/{v}/pandoc-{v}-linux-amd64.tar.gz".format(v = PANDOC_VERSION),
+)
+
+register_toolchains(
+    "//bazel-pandoc:pandoc_toolchain_linux-x86_64",
+)

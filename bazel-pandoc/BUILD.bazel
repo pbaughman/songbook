@@ -1,0 +1,50 @@
+load(":toolchain.bzl", "pandoc_toolchain")
+
+exports_files(["README.md"])
+
+# Precompiled Pandoc binaries provided by upstream.
+
+toolchain_type(
+    name = "pandoc_toolchain_type",
+    visibility = ["//visibility:public"],
+)
+
+pandoc_toolchain(
+    exec_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+    platform = "linux-x86_64",
+)
+
+pandoc_toolchain(
+    exec_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:arm64",
+    ],
+    platform = "linux-arm64",
+)
+
+pandoc_toolchain(
+    exec_compatible_with = [
+        "@platforms//os:osx",
+        "@platforms//cpu:arm64",
+    ],
+    platform = "macOS-arm64",
+)
+
+pandoc_toolchain(
+    exec_compatible_with = [
+        "@platforms//os:osx",
+        "@platforms//cpu:x86_64",
+    ],
+    platform = "macOS-x86_64",
+)
+
+pandoc_toolchain(
+    exec_compatible_with = [
+        "@platforms//os:windows",
+        "@platforms//cpu:x86_64",
+    ],
+    platform = "windows-x86_64",
+)
