@@ -26,5 +26,5 @@ http_archive(
 )
 
 register_toolchains(
-    "//bazel-pandoc:pandoc_toolchain_linux-x86_64",
+    "//bazel_pandoc:pandoc_toolchain_linux-x86_64",
 )

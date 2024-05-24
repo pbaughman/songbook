@@ -50,7 +50,7 @@ PANDOC_EXTENSIONS = {
 }
 
 def _pandoc_impl(ctx):
-    toolchain = ctx.toolchains["//bazel-pandoc:pandoc_toolchain_type"]
+    toolchain = ctx.toolchains["//bazel_pandoc:pandoc_toolchain_type"]
     cli_args = []
     cli_args.extend(ctx.attr.options)
     if ctx.attr.from_format:
@@ -78,7 +78,7 @@ _pandoc = rule(
         "to_format": attr.string(),
         "output": attr.output(mandatory = True),
     },
-    toolchains = ["//bazel-pandoc:pandoc_toolchain_type"],
+    toolchains = ["//bazel_pandoc:pandoc_toolchain_type"],
     implementation = _pandoc_impl,
 )
 
