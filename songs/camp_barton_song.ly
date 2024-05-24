@@ -1,0 +1,33 @@
+\language "english"
+\version "2.24.3"
+
+\score {
+  \relative {
+    \key g \major
+    \partial 8*3
+    {
+      g'8 a b c4 b a b a8 g8 g8 r4
+      g8 a b c4 b c cs d2 r8
+      a8 b cs d4 cs b a d8 g, g r4
+      g8 a b c4 b c cs d8 g, g g g
+      g8 a b c4 b a b a8 g8 g8 r4
+      g8 a b c4 b c cs d8 a a r4
+      a8 b cs d4 cs4 b4 a4 d8 g, g g d' g, g 
+      g a a a a b4 g c\glissando g\glissando c
+    }
+    \addlyrics {
+      Oh there's a scout -- ing camp at Fron -- tin -- ac.
+      A camp that's real -- ly worth your wile.
+      I've seen a doz -- en oth -- er scout -- ing camps,
+      but Bar -- ton's got them beat a mile or two or three.
+      You bet -- ter come to Fron -- tin --ac to -- day.
+      Put on your shorts and come pre -- pared to stay.
+      When camp -- ing time comes round a -- gain you'll say a -- gain you'll say
+      camp Bar -- ton is the place for me _ _ 
+    }
+  }
+  \layout {}
+  \midi {
+    \tempo 4=120
+  }
+}
