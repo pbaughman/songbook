@@ -8,7 +8,7 @@
     {
       g'8 g4 a8 c4 d8 c e8 e4 d8 c4
       c8 c a c4 c8 d c4 a8 g4~ g2
-      a8 a g a c a c4 d8 c e e e d c4
+      a8 a g g a a c4 d8 c e e e d c4
       d8 c e g4 g8 e c d b c4.~ c2
     }
     \addlyrics {
