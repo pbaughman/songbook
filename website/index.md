@@ -18,6 +18,9 @@ way" that these songs are performed.
 * Mountain Dew
     * [Sheet Music](./mountain_dew.png)
     * [MIDI](./mountain_dew.midi)
+* The Quartermaster's Store
+    * [Sheet Music](./quartermaster_store.png)
+    * [MIDI](./quartermaster_store.midi)
 * The Titanic
     * [Sheet Music](./the_titanic.png)
     * [MIDI](./the_titanic.midi)
