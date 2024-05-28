@@ -10,6 +10,13 @@ git_override(
   commit = "58b7074",
 )
 
+bazel_dep(name = "rules_python")
+git_override(
+  module_name = "rules_python",
+  remote = "https://github.com/bazelbuild/rules_python.git",
+  commit = "975edfe"
+)
+
 PANDOC_VERSION = "2.8.0.1"
 
 BUILD_CONTENT_UNIX = """
