@@ -6,13 +6,13 @@ run_binary(
   name="index",
   srcs=[
     "index.template.md",
-    "song_list.md",
+    "//songs:song_list.md",
   ],
   outs=["index.md"],
   args = [
     "--template=$(location index.template.md)",
     "--output=$(location index.md)",
-    "--include=$(location song_list.md)",
+    "--include=$(location //songs:song_list.md)",
   ],
   tool="//md_merge:md_merge"
 )

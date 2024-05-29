@@ -1,9 +1,21 @@
 load("@bazel_lilypond//:lilypond.bzl", "lilypond")
+load("@bazel_skylib//rules:run_binary.bzl", "run_binary")
+load("@rules_python//python:defs.bzl", "py_binary")
+load(":build_sheetmusic.bzl", "build_sheet_music")
 
-lilypond(name="camp_barton_song")
-lilypond(name="dummy_line")
-lilypond(name="dunderbeck")
-lilypond(name="grace")
-lilypond(name="mountain_dew")
-lilypond(name="quartermaster_store")
-lilypond(name="the_titanic")
+sheet_music_targets = build_sheet_music(
+  srcs=glob(include=["*.ly"])
+)
+
+py_binary(
+  name = "songlist_from_files",
+  srcs = ["songlist_from_files.py"],
+)
+
+run_binary(
+  name="generate_song_list_md",
+  outs=["song_list.md"],
+  args=["--output=$(location song_list.md)"] + sheet_music_targets,
+  tool=":songlist_from_files",
+  visibility=["//visibility:public"],
+)
