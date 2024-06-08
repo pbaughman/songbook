@@ -12,6 +12,7 @@ run_binary(
   args = [
     "--template=$(location index.template.md)",
     "--output=$(location index.md)",
+    "--include=$(location song_list.md)",
   ],
   tool="//md_merge:md_merge"
 )
