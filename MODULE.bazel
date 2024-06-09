@@ -7,7 +7,7 @@ bazel_dep(
 git_override(
   module_name = "bazel_lilypond",
   remote = "https://github.com/pbaughman/bazel-lilypond.git",
-  commit = "58b7074",
+  commit = "efc9a62",
 )
 
 bazel_dep(name = "rules_python")
