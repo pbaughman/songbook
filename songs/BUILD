@@ -4,7 +4,8 @@ load("@rules_python//python:defs.bzl", "py_binary")
 load(":build_sheetmusic.bzl", "build_sheet_music")
 
 sheet_music_targets = build_sheet_music(
-  srcs=glob(include=["*.ly"])
+  srcs=glob(include=["*.ly"]),
+  filegroup="all_artifacts",
 )
 
 py_binary(
