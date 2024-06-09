@@ -17,6 +17,14 @@ git_override(
   commit = "975edfe"
 )
 
+pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
+pip.parse(
+  hub_name = "my_deps",
+  requirements_lock = "requirements_lock.txt",
+  python_version = "3.11"
+)
+use_repo(pip, "my_deps")
+
 PANDOC_VERSION = "2.8.0.1"
 
 BUILD_CONTENT_UNIX = """
