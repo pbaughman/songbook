@@ -18,8 +18,9 @@ def main(argv):
   with open(args.output, 'w') as wfile:
     for song_file in sorted(args.song_files):
       wfile.write(f'* {target_name_to_title_name(song_file)}\n')
+      wfile.write(f'<br><midi-player src=./{song_file}.midi></midi-player>\n')
       wfile.write(f'    * [Sheet Music](./{song_file}.png)\n')
-      wfile.write(f'    * [MIDI](./{song_file}.midi)\n')
+      wfile.write(f'    * [Download MIDI](./{song_file}.midi)\n')
 
 if __name__ == "__main__":
   main(sys.argv[1:])

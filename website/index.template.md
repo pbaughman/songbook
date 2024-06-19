@@ -11,3 +11,6 @@ way" that these songs are performed.
 If you think you found a mistake, please let me know
 [over on github](https://github.com/pbaughman/songbook) which is also where
 you'll find the raw data this sheet music is generated from.
+
+This site uses [html-midi-player](https://github.com/cifkao/html-midi-player)
+to play songs in the browser.

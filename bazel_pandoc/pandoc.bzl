@@ -51,21 +51,21 @@ PANDOC_EXTENSIONS = {
 
 def _pandoc_impl(ctx):
     toolchain = ctx.toolchains["//bazel_pandoc:pandoc_toolchain_type"]
-    cli_args = []
-    cli_args.extend(ctx.attr.options)
+    cli_args = [ctx.expand_location(a, ctx.attr.data) for a in ctx.attr.options]
     if ctx.attr.from_format:
         cli_args.extend(["--from", ctx.attr.from_format])
     if ctx.attr.to_format:
         cli_args.extend(["--to", ctx.attr.to_format])
     cli_args.extend(["-o", ctx.outputs.output.path])
     cli_args.extend([ctx.file.src.path])
+    data_deps = depset(transitive = [d.files for d in ctx.attr.data])
     ctx.actions.run(
         mnemonic = "Pandoc",
         executable = toolchain.pandoc.files.to_list()[0].path,
         arguments = cli_args,
         inputs = depset(
             direct = ctx.files.src,
-            transitive = [toolchain.pandoc.files],
+            transitive = [toolchain.pandoc.files, data_deps],
         ),
         outputs = [ctx.outputs.output],
     )
@@ -77,6 +77,7 @@ _pandoc = rule(
         "src": attr.label(allow_single_file = True, mandatory = True),
         "to_format": attr.string(),
         "output": attr.output(mandatory = True),
+        "data": attr.label_list(allow_files = True),
     },
     toolchains = ["//bazel_pandoc:pandoc_toolchain_type"],
     implementation = _pandoc_impl,

@@ -22,7 +22,14 @@ pandoc(
   name = "index_html",
   src = "index.md",
   output = "index.html",
-  options = ["--shift-heading-level-by=-1", "--standalone"],
+  options = [
+    "--shift-heading-level-by=-1", 
+    "--standalone",
+    "--include-after-body=$(location script.html)",
+  ],
+  data = [
+    ":script.html",
+  ]
 )
 
 deploy(
