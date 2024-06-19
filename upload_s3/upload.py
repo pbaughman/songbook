@@ -66,7 +66,7 @@ def main(argv):
       if upload_file(s3_client, file_name, args.bucket):
         print(f'{file_name} uploaded')
       else:
-        print(f'{file_name} already up to date on S3')
+        print(f'skipping {file_name}: already up to date on S3')
   if args.output:
     with open(args.output, 'w') as outfile:
       outfile.write('ok')
