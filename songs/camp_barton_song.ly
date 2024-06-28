@@ -1,9 +1,13 @@
 \language "english"
 \version "2.24.3"
 
+\header {
+  title = "Camp Barton Song"
+}
+
 \score {
   \relative {
-    \key g \major
+    \key c \major
     \partial 8*3
     {
       g'8 a b c4 b a b a8 g8 g8 r4
@@ -31,3 +35,18 @@
     \tempo 4=120
   }
 }
+
+\markup \wordwrap {
+  Most camp staffers call the Camp Barton Song their favorite song.
+
+  Back when I was a scout, the first line of the song was "Oh there's a boy
+  scout camp at Frontinac" but the song changed when girls were allowed to
+  join.
+
+  The tune here is similar to the Washington and Lee Fight Song, or the
+  Washington and Lee Swing, but a little simpler.
+
+  I'm not totally sure if this song starts on a G or an F.  I've seen sheet
+  music for the Washington and Lee Swing both ways.
+}
+
