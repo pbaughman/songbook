@@ -15,7 +15,7 @@ global = {
   \sectionLabel "Fanfare"
   \repeat volta 2 {
     c2. a4. r4 a8 c2. a4. r4 a8 c4 c8 a4 a8 f4 f8 a4 c,8 f2. |
-    \drummode {bd2. 2. 4. 4. 4. r4. 2. 2. 4. 4. } |
+    \drummode {r2. r4. bd4. r2. r4. bd4. r2. r2. 4. 4.} |
     \alternative {
       \volta 1 {
         r4. r4 a8 |
@@ -57,7 +57,7 @@ global = {
 
 combined_staffs = {
   \new StaffGroup <<
-    \new Staff { \global \relative \horns \fine }
+    \new Staff \with {instrumentName = "Horns"} { \global \relative \horns \fine }
     \new DrumStaff \with {instrumentName = "Bass Drum" } {  \percussion \fine }
   >>
 }
