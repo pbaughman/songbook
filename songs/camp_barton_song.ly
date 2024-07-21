@@ -46,7 +46,9 @@
   The tune here is similar to the Washington and Lee Fight Song, or the
   Washington and Lee Swing, but a little simpler.
 
-  I'm not totally sure if this song starts on a G or an F.  I've seen sheet
-  music for the Washington and Lee Swing both ways.
+  I'm not totally sure if this song starts with notes G A B C or an F G A Bb.
+  I've seen sheet music for the Washington and Lee Swing both ways and my own
+  pitch is far from perfect.  The fingering is a little easier on my Hurdy
+  Gurdy if I start on an F.
 }
 
