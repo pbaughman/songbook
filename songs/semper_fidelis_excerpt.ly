@@ -8,14 +8,14 @@ global = {
 
 \parallelMusic horns,percussion {
   % Bass Drum Intro
-  R2.*7 r4. r4 a'8 |
+  R2.*7 r4. r4 a''8 |
   \drummode {bd2. 2. 4. 4. 4. r4. 2. 2. 4. 4. 4. r4. } |
 
   % Initial Fanfare
   \sectionLabel "Fanfare"
   \repeat volta 2 {
     c2. a4. r4 a8 c2. a4. r4 a8 c4 c8 a4 a8 f4 f8 a4 c,8 f2. |
-    \drummode {r2. r4. bd4. r2. r4. bd4. r2. r2. 4. 4.} |
+    \drummode {r2. r4. bd4. r2. r4. bd4. r2. r2. r4. 4.} |
     \alternative {
       \volta 1 {
         r4. r4 a8 |
@@ -32,21 +32,28 @@ global = {
   \sectionLabel "March"
   \repeat volta 2 {
     a'2.~ a8 f a c4 a8 c2. a f~ f8 c f a4 f8 c2.~ c4. c'4. |
-    \drummode {bd2. 2. 4. 4. 4. r4. 2. 2. 4. 4. 4. r4. } |
+    \drummode {bd4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. } |
 
-    a2.~ a8 f a c4 a8 c2. a2. c,2.~ c8 f a c4 c,8 f2.~ |
-    \drummode {bd2. 2. 4. 4. 4. r4. 2. 2. 4. 4. } |
+    a2.~ a8 f a c4 a8 c2. a2. c,2.~ c8 f a c4 c,8 f2.~ f4. c4-. c8-. |
+    \drummode {bd4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. r4.} |
+
+    % The staccato part
+
+    a'2.-. r8 f-. a-. c4-. a8-. c2.-. a-. f-. r8 c-. f-. a4-. f8-. c2.-. r4. c'4.-. |
+    \drummode {r4. bd4. 4. r4. r4. 4. r4. 4. r4. 4. 4. r4. r4. 4. 4. r4. } |
+
+    a2.-. r8 f-. a-. c4-. a8-. c2.-. a2.-. c,2.-. r8 f-. a-. c4-. c,8-. f2.-.|
+    \drummode {r4. bd4. 4. r4. r4. 4. r4. 4. r4. 4. 4. r4. r4. 4. } |
 
     \alternative {
       \volta 1 {
-        f4. c4 c8 |
-        \drummode { 4. r4. } |
+         r4. c4 c8 |
+         \drummode { 4. r4. } |
       }
       \volta 2 {
-        f4. r4. |
-        \drummode { 4. r4. } |
+         r2. |
+         \drummode { 4. r4. } |
       }
-
     }
   }
 
@@ -55,7 +62,9 @@ global = {
   \drummode {bd2. 2. 4. 4. 4. r4. 2. 2. 4. 4. 4. r4. } |
 }
 
-combined_staffs = {
+% I'm not sure why, but I originally had this in the key of f.  It needs to be in c
+% for the bugler to play it, though - so we'll transpose it below.
+combined_staffs = \transpose f c {
   \new StaffGroup <<
     \new Staff \with {instrumentName = "Horns"} { \global \relative \horns \fine }
     \new DrumStaff \with {instrumentName = "Bass Drum" } {  \percussion \fine }
