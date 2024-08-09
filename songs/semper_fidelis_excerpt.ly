@@ -39,10 +39,10 @@ global = {
 
     % The staccato part
 
-    a'2.-. r8 f-. a-. c4-. a8-. c2.-. a-. f-. r8 c-. f-. a4-. f8-. c2.-. r4. c'4.-. |
+    a'4.-. r r8 f-. a-. c4-. a8-. c4.-. r a-. r f-. r r8 c-. f-. a4-. f8-. c4.-. r r c'4.-. |
     \drummode {r4. bd4. 4. r4. r4. 4. r4. 4. r4. 4. 4. r4. r4. 4. 4. r4. } |
 
-    a2.-. r8 f-. a-. c4-. a8-. c2.-. a2.-. c,2.-. r8 f-. a-. c4-. c,8-. f2.-.|
+    a4.-. r r8 f-. a-. c4-. a8-. c4.-. r a-.r  c,-. r  r8 f-. a-. c4-. c,8-. f2.-.|
     \drummode {r4. bd4. 4. r4. r4. 4. r4. 4. r4. 4. 4. r4. r4. 4. } |
 
     \alternative {
