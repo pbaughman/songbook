@@ -38,5 +38,6 @@ deploy(
   files=[
     "//songs:all_artifacts",
     ":index.html",
+    ":songbook.pdf",
   ],
 )
